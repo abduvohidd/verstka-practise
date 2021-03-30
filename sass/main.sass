@@ -1,0 +1,323 @@
+@import "bourbon"
+@import "vars.sass"
+
+@import "app/libs/magnific-popup/dist/magnific-popup"
+@import "app/libs/animate/animate.sass"
+@import "app/libs/superfish/dist/css/superfish"
+@import "app/libs/font-awesome/scss/font-awesome"
+@import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all"
+@import "app/css/magnific-custom"
+
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+
+.mm-menu
+	&.mm-offcanvas
+		z-index: 4
+	.fa
+		display: none
+
+.sect-sevices
+	background-color: #efefef
+
+.sect-universal
+	background-color: #efefef
+	padding: 60px 0
+	background-size: cover
+	position: relative
+	&::before
+		position: absolute
+		content: ""
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		opacity: 0.85
+	h2
+		margin-bottom: 45px
+		font-size: em(40px)
+		line-height: em(18px)
+
+.sect-news
+	background-image: url(../img/news-bg.jpg)
+	color: #fff
+	&::before
+		background-color: $main-color
+
+.new-item
+	.new-item-text
+		margin-bottom: 25px
+	background-color: #efefef
+	padding: 1px 1px 32px 1px
+	color: #111
+	text-align: center
+	margin: 20px 0 
+	&:hover
+		.new-item-img
+			.fa
+				opacity: 0.4
+			&::before
+				opacity: 0.7
+	&-img
+		min-height: 180px
+		background-size: cover
+		display: block
+		position: relative
+		.fa
+			font-size: 25px
+			color: #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-left: -10px
+			margin-top: -10px
+			opacity: 0
+			transition: all 0.5s ease
+		&::before
+			position: absolute
+			content: ""
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: $main-color	
+			opacity: 0
+			transition: all 0.5s ease
+	.new-item-text
+		h4, p
+			padding: 0 20px
+		p
+			font-size: em(14px)
+			margin:
+				top: 0
+		h4
+			margin-bottom: 30px
+			
+
+
+.link-item
+	display: block
+	padding: 14px
+	border: $accent-color 4px solid
+	background-color: #fff
+	color: #111
+	text-decoration: none
+	margin:
+		bottom: 15px
+		top: 15px
+	&::after
+		display: block
+		content: ""
+		clear: both
+	.h4
+		text-decoration: underline
+		line-height: 18px
+		font-size: 16px
+		display: block
+	&:hover
+		text-decoration: none
+		.h4
+			text-decoration: none
+	img
+		width: 34px
+		height: auto
+		float: left
+		margin-right: 10px
+
+
+
+.main-foot
+	background-color: #0e0b13
+	padding: 70px 0 
+	color: #fff
+	.top-button
+		margin:
+			bottom: 40px
+			top: 15px	
+
+	.logo
+		opacity: 0.4
+	.footer-about
+		opacity: 0.3
+		font-size: em(13px)
+		margin:
+			top: 28px
+			bottom: 50px
+	.top-pannel-box
+		margin-bottom: 25px
+		.menu-type-2
+			li
+				margin-bottom: 8px		
+		li
+			max-width: 100%
+			opacity: 0.6
+			margin-bottom: 18px 
+			font-size: em(13px)
+			display: block
+			transition: all 0.5s ease
+			&:hover
+				opacity: 1
+				.fa
+					opacity: 0.8
+			a
+				color: #fff
+				text-decoration: underline
+				display: block
+				&:hover
+					text-decoration: none
+
+				.fa
+					top: 3px
+
+			.fa
+				transition: all 0.5s ease
+				opacity: 0.4
+		
+	.developer
+		margin:
+			bottom: 30px
+			top: 80px
+		a
+			display: inline-block
+			width: 120px
+			color: #fff
+			font-size: 14px
+			text-align: left
+			&:hover, &:focus
+				text-decoration: none
+			img, span
+				display: block
+
+
+.popup-form
+	position: relative
+	h3
+		text-align: center
+	label, input
+		display: block
+	label
+		margin-bottom: 12px
+		span
+			font-size: 15px
+			color: #999
+	input
+		border: $accent-color 4px solid
+		padding: 7px 15px
+	.button
+		margin-top: 20px
+		margin-bottom: 10px
+	.success
+		position: absolute
+		display: none
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		text-align: center
+		background-color: #fff
+		z-index: 2
+		font-family: "RobotoCondensedBold",sans-serif
+		padding: 30%
+		text-transform: uppercase
+		align-items: center
+		&.visible
+			display: flex
+
+.service-item
+	border: 5px lighten($main-color, 6%) solid
+	transition: all 0.5s ease
+	text-align: center
+	padding-bottom: 32px
+	background-color: #fff
+	z-index: 2
+	
+	&:hover
+		transform: scale(1.05)
+		border-color: $accent-color
+		box-shadow: rgba(0,0,0,.35 ) 0 0 32px
+		a.service-item-image
+			.fa
+				opacity: 0.4
+			&::before
+				opacity: 0.7
+		.service-item-stars
+			.fa
+				margin: 0 3px
+				color: $accent-color
+	h4
+		font-size: 18px
+		margin-bottom: 10px
+	&-image
+		min-height: 190px
+		background-size: cover
+		position: relative
+		.fa
+			font-size: 25px
+			color: #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-left: -10px
+			margin-top: -10px
+			opacity: 0
+			transition: all 0.5s ease
+		&::before
+			position: absolute
+			content: ""
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: $main-color	
+			opacity: 0
+			transition: all 0.5s ease
+
+	&-stars
+		font-size: 11px
+		color: #b4b4b4
+		.fa
+			margin-left: 1px
+			transition: all 0.5s ease
+	&-price
+		margin:
+			top: 5px
+			bottom: 26px
+		font:
+			size: em(17px)
+			family: "RobotoBold",sans-serif
+		span
+			font-size: em(28px)
+		.fa
+			color: $accent-color
+			font-size: 18px
+//ALWAYS END
+@import "media"
+
+
+
